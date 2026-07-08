@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metaverse</title>
+    <link rel="stylesheet" href="meta.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="navimgs">
+                <svg class="menu-icon" id="menuOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                <div class="navlogo-colored"><span><img src="./logo-A6XKpeWY.png" alt="logo"></span></div>
+                <div class="navlogo-white"><span><img src="./download (3).png" alt="logo"></span></div>
+            </div>
+
+            <div class="navlist">
+                <a href="#hero" class="active">Home</a>
+                <a href="#places">Place to Stay</a>
+                <a href="#NFTs">NFTs</a>
+                <a href="#community">Community</a>
+            </div>
+
+            <button class="navbtn" id="connectWalletBtn">Connect Wallet</button>
+
+            <div class="mobile-nav-search">
+                <button class="search-btn">Search</button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close" id="menuClose">&times;</button>
+            <button class="mobile-link" onclick="scrollToSection('hero')">Home</button>
+            <button class="mobile-link" onclick="scrollToSection('places')">Place to Stay</button>
+            <button class="mobile-link" onclick="scrollToSection('NFTs')">NFTs</button>
+            <button class="mobile-link" onclick="scrollToSection('community')">Community</button>
+            <button class="mobile-link" id="mobileConnectBtn">Connect Wallet</button>
+        </div>
+
+        <!-- Wallet Modal -->
+        <div class="modal-wrapper" id="walletModal">
+            <div class="modal-content">
+                <button class="close" id="modalClose">&times;</button>
+                <h3>Choose your preferred wallet</h3>
+                <hr>
+                <div class="wallets">
+                    <div class="metamask-cont" onclick="closeWalletModal()">
+                        <svg class="metamask" viewBox="0 0 40 40" fill="none">
+                            
+                        </svg>
+                        <h6>Metamask</h6>
+                        <span class="forward">&gt;</span>
+                    </div>
+                    <div class="walletconnect-cont" onclick="closeWalletModal()">
+                        <svg class="walletconnect" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="20" fill="#3B99FC"/>
+                            <path d="M12.5 15.5C16.6 11.4 23.4 11.4 27.5 15.5L28.1 16.1C28.3 16.3 28.3 16.7 28.1 16.9L26.4 18.6C26.3 18.7 26.1 18.7 26 18.6L25.2 17.8C22.3 14.9 17.7 14.9 14.8 17.8L13.9 18.7C13.8 18.8 13.6 18.8 13.5 18.7L11.8 17C11.6 16.8 11.6 16.4 11.8 16.2L12.5 15.5ZM31 18.9L32.5 20.4C32.7 20.6 32.7 21 32.5 21.2L25.2 28.5C25 28.7 24.6 28.7 24.4 28.5L19.5 23.6C19.4 23.5 19.3 23.5 19.2 23.6L14.3 28.5C14.1 28.7 13.7 28.7 13.5 28.5L6.2 21.2C6 21 6 20.6 6.2 20.4L7.7 18.9C7.9 18.7 8.3 18.7 8.5 18.9L13.4 23.8C13.5 23.9 13.6 23.9 13.7 23.8L18.6 18.9C18.8 18.7 19.2 18.7 19.4 18.9L24.3 23.8C24.4 23.9 24.5 23.9 24.6 23.8L29.5 18.9C29.7 18.7 30.1 18.7 30.3 18.9L31 18.9Z" fill="white"/>
+                        </svg>
+                        <h6>WalletConnect</h6>
+                        <span class="forward">&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="left-of-hero">
+                <h1 class="hero-heading">
+                    <span class="hero-span">Place</span> to <span class="hero-span">Metaverse</span>
+                </h1>
+                <p class="hero-text">
+                    We provide you with access to luxury and affordable houses in the metaverse. Get a chance to turn your imagination to reality at your comfort zone.
+                </p>
+                <div class="hero-search">
+                    <input type="text" placeholder="Search for location">
+                    <button class="hero-btn">Search</button>
+                </div>
+            </div>
+            <div class="hero-images">
+                    <img src="./image1-mZmoDPN4.png" alt="house">
+                    <img src="./image2-DFFEIbLI.png" alt="house">
+                    <img src="./image4-C_JbHHvF.png" alt="house">
+                    <img src="./image3-Jr-7yKQ3.png" alt="house">
+            </div>
+        </section>
+
+        <!-- Bridge Images - Desktop -->
+        <div class="bridge-images-lg">
+            <span class="bridge-img"><img src="./download (1).png" alt="brands">MBtoken</span>
+            <span class="bridge-img"><img src="./download.png" alt="brands">METAMASK</span>
+            <span class="bridge-img"><img src="./download (2).png" alt="brands">Opensea</span>
+        </div>
+
+        <!-- Bridge Images - Mobile -->
+        <!-- <div class="bridge-images-sm">
+            <span class="bridge-img"><img src="./download (1).png" alt="brands"></span>
+            <span class="bridge-img"><img src="./download.png" alt="brands"></span>
+            <span class="bridge-img"><img src="./download (2).png" alt="brands"></span>
+        </div> -->
+
+        <!-- Places/Cards Section -->
+        <section id="places" class="card-section">
+            <h1>Inspiration for your next adventure</h1>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="./home1-BNZMuhxz (1).png" alt="Castle">
+                    <div class="title-price">
+                        <p>Desert king</p>
+                        <p class="price">1MBTb per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>2345km away</p>
+                        <p>Available for 2 weeks</p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ddd">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home2-CAMlRaMq (1).png" alt="Beach House">
+                    <div class="title-price">
+                        <p>Ocean breeze</p>
+                        <p class="price">2MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>1200km away</p>
+                        <p>Available for 1 week stay</p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home7-Bngtfw1S.png" alt="Farm">
+                    <div class="title-price">
+                        <p>cozy Apartment</p>
+                        <p class="price">1.8MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>950km away</p>
+                        <p>Available for 2 weeks stay</p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ddd">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home4-DwQhtriX (1).png" alt="Sky Loft">
+                    <div class="title-price">
+                        <p>Mointain veiw</p>
+                        <p class="price">1.5MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>800km away</p>
+                        <p>Available for 3 weeks Stay/p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home5-C0RSgtgT.png" alt="Sky Loft">
+                    <div class="title-price">
+                        <p>city light</p>
+                        <p class="price">2.5MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>500km away</p>
+                        <p>Available for 3 weeks Stay/p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home4-DwQhtriX (1).png" alt="Sky Loft">
+                    <div class="title-price">
+                        <p>island retreat</p>
+                        <p class="price">3MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>4500km away</p>
+                        <p>Available for 1 month Stay/p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home5-C0RSgtgT.png" alt="Sky Loft">
+                    <div class="title-price">
+                        <p>forest haven</p>
+                        <p class="price">1.2MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>1500km away</p>
+                        <p>Available for 2 days Stay/p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./home8-CJSetOnX.png" alt="Sky Loft">
+                    <div class="title-price">
+                        <p>sunset villa</p>
+                        <p class="price">2.7MBT per night</p>
+                    </div>
+                    <div class="dist-avail">
+                        <p>2000km away</p>
+                        <p>Available for 2 weeks Stay/p>
+                    </div>
+                    <div class="card-star">
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                        <span style="color: #ffc107">★</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NFTs Section -->
+        <section id="NFTs" class="Nfts">
+            <div class="Nfts-content-left">
+                <h1>Metabnb NFTs</h1>
+                <p>
+                    Discover our NFT gift cards collection. Loyal customers get amazing gift cards which are traded as NFTs. These NFTs give our customers access to loads of exclusive services.
+                </p>
+                <button>Learn more</button>
+            </div>
+            <div class="NFTs-content-right">
+                <img src="./group-img-Dn6q4ltL (1).png" alt="NFT Collection">
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="community" class="footer">
+            <div class="left-footer">
+                <div class="logo-text">Meta<span>bnb</span></div>
+                <h5>Join the community</h5>
+                <div class="social-icons">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+            <div class="right-footer">
+                <div class="places">
+                    <h3>Places</h3>
+                    <a href="#">Castle</a>
+                    <a href="#">Farms</a>
+                    <a href="#">Beach</a>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="about-us">
+                    <h3>About Us</h3>
+                    <a href="#">Road map</a>
+                    <a href="#">Creators</a>
+                    <a href="#">Career</a>
+                    <a href="#">Contact us</a>
+                </div>
+                <div class="community">
+                    <h3>Community</h3>
+                    <a href="#">NFT</a>
+                    <a href="#">Tokens</a>
+                    <a href="#">Landlords</a>
+                    <a href="#">Discord</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="meta.js"></script>
+</body>
+</html>
